@@ -1,16 +1,8 @@
-from core.bootstrap import bootstrap
 from core.nlp_engine import NLPEngine
 from core.data_manager import add_qa
 from core.trainer import train
-from core.cms_logger import get_logger
-
-log = get_logger("AI_MAIN")
-
 
 def main():
-    # ===== SETUP OTOMATIS (venv, requirements, update) =====
-    bootstrap()
-
     ai = NLPEngine()
     print("AI siap. Ketik 'exit' untuk keluar.")
 
@@ -25,7 +17,6 @@ def main():
             print("AI:", answer)
             continue
 
-        # ===== AI TIDAK TAHU =====
         print("AI: Maaf, saya belum tahu jawabannya.")
         confirm = input("Apakah Anda mau memberikan jawabannya? (y/n): ").strip().lower()
 
@@ -39,12 +30,11 @@ def main():
             print("AI: Melatih ulang model...")
 
             train()
-            ai = NLPEngine()  # reload model
+            ai = NLPEngine()
 
             print("AI: Saya sudah belajar jawaban baru.")
         else:
-            print("AI: Pertanyaan tersebut sudah ada sebelumnya.")
-
+            print("AI: Pertanyaan tersebut sudah ada.")
 
 if __name__ == "__main__":
     main()
