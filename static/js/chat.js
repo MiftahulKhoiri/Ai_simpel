@@ -4,6 +4,8 @@ function addMessage(text, sender) {
     msg.className = "message " + sender;
     msg.innerText = text;
     chatBox.appendChild(msg);
+
+    // auto scroll ke bawah
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
@@ -33,8 +35,11 @@ function sendMessage() {
     });
 }
 
-// Kirim dengan Enter
+// ENTER untuk kirim
 document.getElementById("user-input")
-    .addEventListener("keypress", function(e) {
-        if (e.key === "Enter") sendMessage();
+    .addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            sendMessage();
+        }
     });
