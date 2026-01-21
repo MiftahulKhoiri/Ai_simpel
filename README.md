@@ -1,2 +1,2 @@
 # Ai_simpel
-Belajar membuat aitanya jawab
+Belajar membuat Ai tanya jawab
