@@ -67,3 +67,7 @@ class SelfUpdater:
         except Exception as e:
             log.error(f"Gagal auto update: {e}")
             return False
+
+def is_working_tree_clean(self) -> bool:
+    status = self._run(["git", "status", "--porcelain"])
+    return status == ""
