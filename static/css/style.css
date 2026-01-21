@@ -87,3 +87,22 @@ body {
     color: white;
     cursor: pointer;
 }
+
+.typing {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.learn-box {
+    margin-top: 6px;
+}
+
+.learn-box button {
+    background: #ff9800;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
