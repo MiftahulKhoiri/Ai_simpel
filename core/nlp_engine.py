@@ -18,24 +18,16 @@ class NLPEngine:
         with open(MODEL_PATH, "rb") as f:
             self.vectorizer = pickle.load(f)
 
-        # PREPROCESS DATASET
-        self.questions = [
-            preprocess_text(item["question"])
-            for item in self.data
-        ]
+        self.questions = [preprocess_text(item["question"]) for item in self.data]
         self.answers = [item["answer"] for item in self.data]
 
         self.question_vectors = self.vectorizer.transform(self.questions)
 
     def ask(self, text: str) -> str:
-        processed_text = preprocess_text(text)
-        user_vector = self.vectorizer.transform([processed_text])
+        processed = preprocess_text(text)
+        user_vector = self.vectorizer.transform([processed])
 
-        similarity = cosine_similarity(
-            user_vector,
-            self.question_vectors
-        )
-
+        similarity = cosine_similarity(user_vector, self.question_vectors)
         best_index = similarity.argmax()
         best_score = similarity[0][best_index]
 
