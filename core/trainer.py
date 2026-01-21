@@ -14,11 +14,7 @@ def train():
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # PREPROCESS DATASET
-    questions = [
-        preprocess_text(item["question"])
-        for item in data
-    ]
+    questions = [preprocess_text(item["question"]) for item in data]
 
     vectorizer = TfidfVectorizer()
     vectorizer.fit(questions)
@@ -28,7 +24,7 @@ def train():
     with open(MODEL_PATH, "wb") as f:
         pickle.dump(vectorizer, f)
 
-    print("Model NLP (dengan stemming) berhasil dilatih.")
+    print("Model NLP (stemming + stopword removal) berhasil dilatih.")
 
 
 if __name__ == "__main__":
