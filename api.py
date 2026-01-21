@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 from core.nlp_engine import NLPEngine
 from core.data_manager import add_qa
@@ -9,6 +9,9 @@ app = Flask(__name__)
 # Load AI sekali (singleton)
 ai = NLPEngine()
 
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 @app.route("/health", methods=["GET"])
 def health():
