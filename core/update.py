@@ -4,7 +4,6 @@ Auto update source code dari GitHub
 """
 
 import subprocess
-import sys
 import os
 
 from core.logger import get_logger
@@ -28,12 +27,18 @@ class SelfUpdater:
     def _is_git_repo(self) -> bool:
         return os.path.isdir(os.path.join(self.repo_dir, ".git"))
 
-    def is_working_tree_clean(self) -> bool:
+    def has_tracked_changes(self) -> bool:
         """
-        True jika tidak ada perubahan lokal (working tree bersih)
+        True jika ada perubahan pada file yang DI-TRACK git
+        (file di .gitignore diabaikan)
         """
-        status = self._run(["git", "status", "--porcelain"])
-        return status == ""
+        status = self._run([
+            "git",
+            "status",
+            "--porcelain",
+            "--untracked-files=no"
+        ])
+        return status != ""
 
     def get_local_commit(self) -> str:
         return self._run(["git", "rev-parse", "HEAD"])
@@ -51,10 +56,10 @@ class SelfUpdater:
                 log.warning("Folder bukan Git repository, skip auto update")
                 return False
 
-            # ⛔ Cegah update jika ada perubahan lokal (data / model)
-            if not self.is_working_tree_clean():
+            # ⛔ HANYA cegah update jika FILE KODE (tracked) berubah
+            if self.has_tracked_changes():
                 log.warning(
-                    "Perubahan lokal terdeteksi (data/model), skip auto update"
+                    "Perubahan kode lokal terdeteksi, skip auto update"
                 )
                 return False
 
