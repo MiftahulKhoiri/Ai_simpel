@@ -1,7 +1,3 @@
-import os
-import sys
-
-from core.update import SelfUpdater
 from core.bootstrap import bootstrap
 from core.nlp_engine import NLPEngine
 from core.data_manager import add_qa
@@ -11,17 +7,9 @@ from core.cms_logger import get_logger
 log = get_logger("AI_MAIN")
 
 
-def restart_program():
-    os.execv(sys.executable, [sys.executable] + sys.argv)
-
-
 def main():
+    # ===== SETUP OTOMATIS (venv, requirements, update) =====
     bootstrap()
-    repo_dir = os.path.dirname(os.path.abspath(__file__))
-    updater = SelfUpdater(repo_dir=repo_dir)
-
-    if updater.update_if_needed():
-        restart_program()
 
     ai = NLPEngine()
     print("AI siap. Ketik 'exit' untuk keluar.")
