@@ -66,17 +66,35 @@ function sendMessage() {
 function teachAI(container) {
     container.innerHTML = "";
 
-    const input = document.createElement("input");
-    input.placeholder = "Masukkan jawaban...";
-    input.style.width = "100%";
-    input.style.marginTop = "5px";
+    const textarea = document.createElement("textarea");
+    textarea.placeholder = "Masukkan jawaban...";
+    textarea.rows = 1;
+    textarea.style.width = "100%";
+    textarea.style.resize = "none";
+    textarea.style.padding = "8px";
+    textarea.style.fontSize = "14px";
+    textarea.style.borderRadius = "8px";
+    textarea.style.border = "1px solid #ccc";
+    textarea.style.marginTop = "6px";
+
+    // AUTO RESIZE HEIGHT
+    textarea.addEventListener("input", () => {
+        textarea.style.height = "auto";
+        textarea.style.height = textarea.scrollHeight + "px";
+    });
 
     const btn = document.createElement("button");
     btn.innerText = "Simpan";
-    btn.style.marginTop = "5px";
+    btn.style.marginTop = "6px";
+    btn.style.background = "#ff9800";
+    btn.style.border = "none";
+    btn.style.color = "white";
+    btn.style.padding = "6px 12px";
+    btn.style.borderRadius = "8px";
+    btn.style.cursor = "pointer";
 
     btn.onclick = () => {
-        const answer = input.value.trim();
+        const answer = textarea.value.trim();
         if (!answer) return;
 
         fetch("/learn", {
@@ -94,14 +112,9 @@ function teachAI(container) {
         });
     };
 
-    container.appendChild(input);
+    container.appendChild(textarea);
     container.appendChild(btn);
-}
 
-document.getElementById("user-input")
-    .addEventListener("keydown", function(e) {
-        if (e.key === "Enter") {
-            e.preventDefault();
-            sendMessage();
-        }
-    });
+    // fokus otomatis
+    textarea.focus();
+}
