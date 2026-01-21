@@ -28,6 +28,13 @@ class SelfUpdater:
     def _is_git_repo(self) -> bool:
         return os.path.isdir(os.path.join(self.repo_dir, ".git"))
 
+    def is_working_tree_clean(self) -> bool:
+        """
+        True jika tidak ada perubahan lokal (working tree bersih)
+        """
+        status = self._run(["git", "status", "--porcelain"])
+        return status == ""
+
     def get_local_commit(self) -> str:
         return self._run(["git", "rev-parse", "HEAD"])
 
@@ -42,6 +49,13 @@ class SelfUpdater:
         try:
             if not self._is_git_repo():
                 log.warning("Folder bukan Git repository, skip auto update")
+                return False
+
+            # ⛔ Cegah update jika ada perubahan lokal (data / model)
+            if not self.is_working_tree_clean():
+                log.warning(
+                    "Perubahan lokal terdeteksi (data/model), skip auto update"
+                )
                 return False
 
             local = self.get_local_commit()
@@ -67,7 +81,3 @@ class SelfUpdater:
         except Exception as e:
             log.error(f"Gagal auto update: {e}")
             return False
-
-def is_working_tree_clean(self) -> bool:
-    status = self._run(["git", "status", "--porcelain"])
-    return status == ""
