@@ -2,6 +2,7 @@ import os
 import sys
 
 from core.update import SelfUpdater
+from core.bootstrap import bootstrap
 from core.nlp_engine import NLPEngine
 from core.data_manager import add_qa
 from core.trainer import train
@@ -15,6 +16,7 @@ def restart_program():
 
 
 def main():
+    bootstrap()
     repo_dir = os.path.dirname(os.path.abspath(__file__))
     updater = SelfUpdater(repo_dir=repo_dir)
 
