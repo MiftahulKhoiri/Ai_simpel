@@ -7,7 +7,7 @@ import subprocess
 import sys
 import os
 
-from core.cms_logger import get_logger
+from core.logger import get_logger
 
 log = get_logger("AI_SELF_UPDATE")
 
