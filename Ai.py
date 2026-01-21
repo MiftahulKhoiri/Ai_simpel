@@ -7,7 +7,7 @@ def run():
 
     if mode == "api":
         import api
-        api.app.run(host="0.0.0.0", port=5000)
+        api.app.run(host="0.0.0.0", port=5000,         debug=True )
     else:
         import main
         main.main()
