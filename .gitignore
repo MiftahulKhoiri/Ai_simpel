@@ -206,6 +206,9 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# data
+# Runtime data & model
 data/qa.json
 model/
+
+# Virtualenv
+venv/
