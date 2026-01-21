@@ -1,8 +1,16 @@
 from core.bootstrap import bootstrap
 
-if __name__ == "__main__":
+def run():
     bootstrap()
 
-    # import SETELAH dependency siap
-    import main
-    main.main()
+    mode = input("Pilih mode (cli/api): ").strip().lower()
+
+    if mode == "api":
+        import api
+        api.app.run(host="0.0.0.0", port=5000)
+    else:
+        import main
+        main.main()
+
+if __name__ == "__main__":
+    run()
