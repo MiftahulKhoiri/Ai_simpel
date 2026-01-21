@@ -4,6 +4,7 @@ from pathlib import Path
 from sklearn.metrics.pairwise import cosine_similarity
 
 from core.utils import preprocess_text
+from core.trainer import train
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_PATH = BASE_DIR / "data" / "qa.json"
@@ -12,6 +13,11 @@ MODEL_PATH = BASE_DIR / "model" / "vectorizer.pkl"
 
 class NLPEngine:
     def __init__(self):
+        # === PASTIKAN MODEL ADA ===
+        if not MODEL_PATH.exists():
+            print("[INFO] Model belum ada, training awal dijalankan...")
+            train()
+
         with open(DATA_PATH, "r", encoding="utf-8") as f:
             self.data = json.load(f)
 
@@ -23,7 +29,7 @@ class NLPEngine:
 
         self.question_vectors = self.vectorizer.transform(self.questions)
 
-    def ask(self, text: str) -> str:
+    def ask_with_score(self, text: str):
         processed = preprocess_text(text)
         user_vector = self.vectorizer.transform([processed])
 
@@ -32,6 +38,6 @@ class NLPEngine:
         best_score = similarity[0][best_index]
 
         if best_score < 0.25:
-            return "Maaf, saya belum memahami pertanyaan itu."
+            return None, best_score
 
-        return self.answers[best_index]
+        return self.answers[best_index], best_score
