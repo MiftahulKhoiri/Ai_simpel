@@ -1,0 +1,18 @@
+[
+  {
+    "question": "halo",
+    "answer": "Halo, ada yang bisa saya bantu?"
+  },
+  {
+    "question": "siapa kamu",
+    "answer": "Saya adalah AI sederhana berbasis Python."
+  },
+  {
+    "question": "apa itu python",
+    "answer": "Python adalah bahasa pemrograman yang mudah dipelajari dan kuat."
+  },
+  {
+    "question": "terima kasih",
+    "answer": "Sama-sama, senang bisa membantu."
+  }
+]
