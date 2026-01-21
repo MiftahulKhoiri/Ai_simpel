@@ -30,14 +30,15 @@ def ask():
 
     if answer:
         return jsonify({
+            "known": True,
             "answer": answer,
             "confidence": round(score, 3)
         })
 
     return jsonify({
-        "answer": None,
-        "confidence": round(score, 3),
-        "message": "AI tidak tahu jawabannya"
+        "known": False,
+        "answer": "Saya belum tahu jawabannya.",
+        "confidence": round(score, 3)
     })
 
 
