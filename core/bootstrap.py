@@ -3,7 +3,7 @@ import sys
 import subprocess
 from pathlib import Path
 
-from core.cms_logger import get_logger
+from core.logger import get_logger
 from core.update import SelfUpdater
 
 log = get_logger("AI_BOOTSTRAP")
