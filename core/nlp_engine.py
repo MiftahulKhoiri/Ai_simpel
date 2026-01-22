@@ -13,9 +13,9 @@ MODEL_PATH = BASE_DIR / "model" / "vectorizer.pkl"
 
 class NLPEngine:
     def __init__(self):
-        # === PASTIKAN MODEL ADA ===
+        # Auto-train jika model belum ada
         if not MODEL_PATH.exists():
-            print("[INFO] Model belum ada, training awal dijalankan...")
+            print("[INFO] Model belum ada, training awal...")
             train()
 
         with open(DATA_PATH, "r", encoding="utf-8") as f:
@@ -24,8 +24,13 @@ class NLPEngine:
         with open(MODEL_PATH, "rb") as f:
             self.vectorizer = pickle.load(f)
 
-        self.questions = [preprocess_text(item["question"]) for item in self.data]
-        self.answers = [item["answer"] for item in self.data]
+        self.questions = []
+        self.answers = []
+
+        for item in self.data:
+            for q in item["questions"]:
+                self.questions.append(preprocess_text(q))
+                self.answers.append(item["answer"])
 
         self.question_vectors = self.vectorizer.transform(self.questions)
 
