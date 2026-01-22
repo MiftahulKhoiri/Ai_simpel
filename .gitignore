@@ -1,6 +1,7 @@
 # Runtime data & model
 data/qa.json
 model/
+backups/
 
 # Virtualenv
 venv/
