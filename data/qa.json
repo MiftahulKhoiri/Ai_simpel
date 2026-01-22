@@ -1,18 +1,75 @@
 [
   {
-    "question": "halo",
+    "intent": "greeting",
+    "questions": [
+      "halo", "hai", "hei", "hello",
+      "selamat pagi", "selamat siang", "selamat sore", "selamat malam",
+      "assalamualaikum", "assalamualaikum wr wb"
+    ],
     "answer": "Halo, ada yang bisa saya bantu?"
   },
   {
-    "question": "siapa kamu",
-    "answer": "Saya adalah AI sederhana berbasis Python."
+    "intent": "identity",
+    "questions": [
+      "siapa kamu", "kamu siapa", "nama kamu siapa", "siapa nama kamu",
+      "kamu ini apa", "kamu itu apa"
+    ],
+    "answer": "Saya adalah asisten AI yang siap membantu Anda."
   },
   {
-    "question": "apa itu python",
-    "answer": "Python adalah bahasa pemrograman yang mudah dipelajari dan kuat."
+    "intent": "capability",
+    "questions": [
+      "kamu bisa apa", "apa yang bisa kamu lakukan", "fungsi kamu apa",
+      "kegunaan kamu apa", "kamu bisa bantu apa"
+    ],
+    "answer": "Saya bisa membantu menjawab pertanyaan, memberi informasi dasar, dan belajar dari percakapan."
   },
   {
-    "question": "terima kasih",
+    "intent": "help",
+    "questions": [
+      "tolong bantu saya", "bisa bantu saya", "saya butuh bantuan",
+      "tolong", "bantu saya"
+    ],
+    "answer": "Tentu, silakan sampaikan apa yang ingin Anda tanyakan."
+  },
+  {
+    "intent": "small_talk_status",
+    "questions": [
+      "apa kabar", "bagaimana kabarmu", "kamu baik baik saja",
+      "lagi apa", "sedang apa"
+    ],
+    "answer": "Saya baik-baik saja dan siap membantu Anda."
+  },
+  {
+    "intent": "ai_nature",
+    "questions": [
+      "kamu manusia", "kamu hidup", "kamu punya perasaan",
+      "kamu robot", "kamu nyata"
+    ],
+    "answer": "Saya adalah program AI, bukan manusia, tetapi saya siap membantu."
+  },
+  {
+    "intent": "thanks",
+    "questions": [
+      "terima kasih", "makasih", "terimakasih",
+      "thanks", "thx"
+    ],
     "answer": "Sama-sama, senang bisa membantu."
+  },
+  {
+    "intent": "farewell",
+    "questions": [
+      "selamat tinggal", "sampai jumpa", "dadah",
+      "bye", "goodbye"
+    ],
+    "answer": "Sampai jumpa, semoga harimu menyenangkan."
+  },
+  {
+    "intent": "fallback_polite",
+    "questions": [
+      "kamu tahu segalanya", "jawab semua pertanyaan",
+      "kamu paling pintar"
+    ],
+    "answer": "Saya berusaha membantu sebaik mungkin, tetapi masih memiliki keterbatasan."
   }
 ]
