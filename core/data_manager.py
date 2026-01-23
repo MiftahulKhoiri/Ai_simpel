@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+
 from core.backup import backup
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,16 +21,32 @@ def save_data(data):
 
 
 def add_qa(question: str, answer: str) -> bool:
+    """
+    Tambahkan pertanyaan ke intent yang cocok.
+    - Jika answer sudah ada → tambah ke questions
+    - Jika belum → buat intent baru
+    Return True jika data berubah
+    """
     data = load_data()
+    question = question.strip().lower()
+    answer = answer.strip()
 
+    # Cari intent dengan jawaban sama
     for item in data:
-        if item["question"] == question:
-            return False  # duplikat
+        if item.get("answer") == answer:
+            if question in item.get("questions", []):
+                return False  # sudah ada
+            item["questions"].append(question)
+            save_data(data)
+            return True
 
-    data.append({
-        "question": question,
+    # Jika belum ada intent dengan jawaban ini
+    new_intent = {
+        "intent": f"auto_{len(data)+1}",
+        "questions": [question],
         "answer": answer
-    })
+    }
 
+    data.append(new_intent)
     save_data(data)
     return True
