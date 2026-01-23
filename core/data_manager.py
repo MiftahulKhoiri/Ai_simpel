@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from core.backup import backup_qa_once
+from core.backup import backup
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_PATH = BASE_DIR / "data" / "qa.json"
@@ -14,7 +14,7 @@ def load_data():
 
 
 def save_data(data):
-    backup_qa_once()
+    backup()
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
