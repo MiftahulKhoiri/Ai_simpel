@@ -11,7 +11,7 @@ DATA_PATH = BASE_DIR / "data" / "qa.json"
 BACKUP_DIR = BASE_DIR / "backups"
 
 
-def backup_qa_once():
+def backup():
     """
     Backup qa.json sebelum diubah.
     - Hanya menyimpan 1 file backup
