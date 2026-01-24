@@ -1,0 +1,190 @@
+[
+  {
+    "intent": "greeting",
+    "templates": [
+      "halo{}",
+      "hai{}",
+      "hello{}",
+      "selamat {}"
+    ],
+    "variants": [
+      "",
+      " kamu",
+      " ai",
+      " asisten"
+    ],
+    "answers": [
+      "Halo, ada yang bisa saya bantu?",
+      "Hai, silakan tanyakan apa saja.",
+      "Halo! Saya siap membantu Anda."
+    ]
+  },
+  {
+    "intent": "identity",
+    "templates": [
+      "{} siapa",
+      "siapa {}",
+      "nama {} siapa",
+      "{} itu apa"
+    ],
+    "variants": [
+      "kamu",
+      "anda",
+      "ai",
+      "asisten"
+    ],
+    "answers": [
+      "Saya adalah asisten AI yang siap membantu Anda.",
+      "Saya program kecerdasan buatan yang dirancang untuk membantu menjawab pertanyaan.",
+      "Saya asisten virtual yang bisa belajar dari percakapan."
+    ]
+  },
+  {
+    "intent": "capability",
+    "templates": [
+      "{} bisa apa",
+      "apa yang bisa {} lakukan",
+      "fungsi {} apa",
+      "{} bisa bantu apa"
+    ],
+    "variants": [
+      "kamu",
+      "ai",
+      "asisten"
+    ],
+    "answers": [
+      "Saya bisa membantu menjawab pertanyaan dan memberikan informasi dasar.",
+      "Saya dapat membantu percakapan, menjawab pertanyaan, dan belajar dari interaksi.",
+      "Saya dirancang untuk menjadi asisten umum yang terus belajar."
+    ]
+  },
+  {
+    "intent": "help_request",
+    "templates": [
+      "{} bantu saya",
+      "tolong {}",
+      "saya butuh bantuan {}",
+      "bisa {} bantu"
+    ],
+    "variants": [
+      "",
+      " dong",
+      " ya"
+    ],
+    "answers": [
+      "Tentu, silakan sampaikan apa yang ingin Anda tanyakan.",
+      "Dengan senang hati, apa yang bisa saya bantu?",
+      "Silakan jelaskan kebutuhan Anda."
+    ]
+  },
+  {
+    "intent": "small_talk_status",
+    "templates": [
+      "apa kabar{}",
+      "{} lagi apa",
+      "bagaimana kabar{}"
+    ],
+    "variants": [
+      "",
+      " kamu",
+      " ai"
+    ],
+    "answers": [
+      "Saya baik-baik saja dan siap membantu.",
+      "Saya selalu siap membantu Anda.",
+      "Saya dalam kondisi baik, terima kasih sudah bertanya."
+    ]
+  },
+  {
+    "intent": "ai_nature",
+    "templates": [
+      "{} manusia",
+      "{} hidup",
+      "{} punya perasaan",
+      "{} robot"
+    ],
+    "variants": [
+      "kamu",
+      "ai",
+      "asisten"
+    ],
+    "answers": [
+      "Saya bukan manusia, melainkan program AI.",
+      "Saya tidak memiliki perasaan seperti manusia, tetapi saya bisa membantu.",
+      "Saya adalah sistem kecerdasan buatan."
+    ]
+  },
+  {
+    "intent": "learning_capability",
+    "templates": [
+      "{} bisa belajar",
+      "apakah {} bisa belajar",
+      "{} belajar dari mana"
+    ],
+    "variants": [
+      "kamu",
+      "ai",
+      "asisten"
+    ],
+    "answers": [
+      "Ya, saya bisa belajar dari data dan interaksi.",
+      "Saya dapat meningkatkan kemampuan melalui pembelajaran data.",
+      "Saya belajar berdasarkan data yang diberikan."
+    ]
+  },
+  {
+    "intent": "thanks",
+    "templates": [
+      "terima kasih{}",
+      "makasih{}",
+      "thanks{}"
+    ],
+    "variants": [
+      "",
+      " ya",
+      " banyak"
+    ],
+    "answers": [
+      "Sama-sama, senang bisa membantu.",
+      "Dengan senang hati.",
+      "Tidak masalah, semoga membantu."
+    ]
+  },
+  {
+    "intent": "farewell",
+    "templates": [
+      "sampai jumpa{}",
+      "selamat tinggal{}",
+      "bye{}",
+      "dadah{}"
+    ],
+    "variants": [
+      "",
+      " ya",
+      " ai"
+    ],
+    "answers": [
+      "Sampai jumpa, semoga harimu menyenangkan.",
+      "Selamat tinggal, sampai bertemu lagi.",
+      "Semoga harimu menyenangkan."
+    ]
+  },
+  {
+    "intent": "fallback_polite",
+    "templates": [
+      "{} tahu segalanya",
+      "{} paling pintar",
+      "{} selalu benar"
+    ],
+    "variants": [
+      "kamu",
+      "ai",
+      "asisten"
+    ],
+    "answers": [
+      "Saya berusaha membantu sebaik mungkin, tetapi masih memiliki keterbatasan.",
+      "Saya tidak selalu benar, namun saya terus belajar.",
+      "Saya akan mencoba membantu sesuai kemampuan saya."
+    ]
+  }
+]
