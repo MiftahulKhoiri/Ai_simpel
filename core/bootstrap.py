@@ -5,12 +5,16 @@ from pathlib import Path
 
 from core.logger import get_logger
 from core.update import SelfUpdater
+from core.trainer import train
 
 log = get_logger("AI_BOOTSTRAP")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 VENV_DIR = BASE_DIR / "venv"
 REQ_FILE = BASE_DIR / "requirements.txt"
+DATA_PATH = BASE_DIR / "data" / "qa.json"
+CONTOH_PATH = BASE_DIR / "data" / "qa_contoh.json"
+MODEL_PATH = BASE_DIR / "model" / "vectorizer.pkl"
 
 
 # ===============================
@@ -74,3 +78,30 @@ def bootstrap():
     if updater.update_if_needed():
         log.warning("Restart setelah update...")
         restart_in_venv()
+# ===============================
+    # INIT DATA & MODEL (JALAN SEKALI)
+    # ===============================
+
+    # 5. Generate dataset awal jika belum ada
+    if not DATA_PATH.exists():
+        log.warning("qa.json belum ada, generate dataset awal...")
+
+        if not CONTOH_PATH.exists():
+            raise RuntimeError("qa_contoh.json tidak ditemukan")
+
+        subprocess.check_call(
+            [str(VENV_DIR / "bin" / "python"), "tools/generate_dataset.py"],
+            cwd=str(BASE_DIR)
+        )
+
+        log.info("Dataset awal berhasil dibuat")
+    else:
+        log.info("qa.json sudah ada, skip generate dataset")
+
+    # 6. Training model awal jika belum ada
+    if not MODEL_PATH.exists():
+        log.warning("Model belum ada, training awal...")
+        train()
+        log.info("Training awal selesai")
+    else:
+        log.info("Model sudah ada, skip training awal")
