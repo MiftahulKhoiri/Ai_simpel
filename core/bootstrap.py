@@ -104,7 +104,7 @@ def bootstrap():
         log.warning("Model belum ada, training awal...")
 
         subprocess.check_call(
-            [str(VENV_DIR / "bin" / "python"), "core/trainer.py"],
+            [str(VENV_DIR / "bin" / "python"),"-m", "core/trainer.py"],
             cwd=str(BASE_DIR)
         )
 
