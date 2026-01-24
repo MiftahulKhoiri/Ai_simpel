@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <title>AI Chat</title>
 
-    <!-- PENTING UNTUK MOBILE -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MOBILE FIRST -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
 
 <div class="chat-app">
+
+    <!-- HEADER -->
     <div class="chat-header">
         🤖 AI Chat Assistant
     </div>
 
+    <!-- CHAT AREA -->
     <div id="chat-box" class="chat-box">
         <div class="message ai">
             Halo, saya AI. Silakan bertanya.
         </div>
     </div>
 
+    <!-- INPUT BAR -->
     <div class="chat-input">
-        <input
-            type="text"
+        <textarea
             id="user-input"
             placeholder="Ketik pesan..."
+            rows="1"
             autocomplete="off"
-        >
-        <button onclick="sendMessage()">➤</button>
+        ></textarea>
+        <button type="button" onclick="sendMessage()">➤</button>
     </div>
+
 </div>
 
 <script src="/static/js/chat.js"></script>
