@@ -1,8 +1,14 @@
 let lastQuestion = "";
 let typingEl = null;
 
+const chatBox = document.getElementById("chat-box");
+const input = document.getElementById("user-input");
+
+/* ===============================
+   UTIL
+================================ */
+
 function addMessage(text, sender) {
-    const chatBox = document.getElementById("chat-box");
     const msg = document.createElement("div");
     msg.className = "message " + sender;
     msg.innerText = text;
@@ -11,7 +17,12 @@ function addMessage(text, sender) {
     return msg;
 }
 
+/* ===============================
+   TYPING INDICATOR
+================================ */
+
 function showTyping() {
+    hideTyping(); // pastikan tidak dobel
     typingEl = addMessage("AI sedang mengetik...", "ai");
     typingEl.classList.add("typing");
 }
@@ -23,14 +34,37 @@ function hideTyping() {
     }
 }
 
+/* ===============================
+   INPUT HANDLING (MOBILE FRIENDLY)
+================================ */
+
+// auto-grow textarea utama
+input.addEventListener("input", () => {
+    input.style.height = "auto";
+    input.style.height = input.scrollHeight + "px";
+});
+
+// Enter = kirim, Shift+Enter = baris baru
+input.addEventListener("keydown", e => {
+    if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+    }
+});
+
+/* ===============================
+   SEND MESSAGE
+================================ */
+
 function sendMessage() {
-    const input = document.getElementById("user-input");
     const text = input.value.trim();
     if (!text) return;
 
     lastQuestion = text;
     addMessage(text, "user");
+
     input.value = "";
+    input.style.height = "auto";
 
     showTyping();
 
@@ -43,9 +77,10 @@ function sendMessage() {
     .then(data => {
         hideTyping();
 
-        const aiMsg = addMessage(data.answer, "ai");
+        const answerText = data.answer || "Maaf, saya belum tahu jawabannya.";
+        const aiMsg = addMessage(answerText, "ai");
 
-        if (!data.known) {
+        if (data.known === false) {
             const learnBox = document.createElement("div");
             learnBox.className = "learn-box";
 
@@ -63,6 +98,10 @@ function sendMessage() {
     });
 }
 
+/* ===============================
+   TEACH AI
+================================ */
+
 function teachAI(container) {
     container.innerHTML = "";
 
@@ -77,7 +116,7 @@ function teachAI(container) {
     textarea.style.border = "1px solid #ccc";
     textarea.style.marginTop = "6px";
 
-    // AUTO RESIZE HEIGHT
+    // auto-grow textarea belajar
     textarea.addEventListener("input", () => {
         textarea.style.height = "auto";
         textarea.style.height = textarea.scrollHeight + "px";
@@ -114,7 +153,5 @@ function teachAI(container) {
 
     container.appendChild(textarea);
     container.appendChild(btn);
-
-    // fokus otomatis
     textarea.focus();
 }
