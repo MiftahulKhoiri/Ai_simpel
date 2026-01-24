@@ -1,10 +1,12 @@
 import json
 import pickle
+import random
 from pathlib import Path
 from sklearn.metrics.pairwise import cosine_similarity
 
 from core.utils import preprocess_text
 from core.trainer import train
+from core.failed_logger import log_failed_question
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_PATH = BASE_DIR / "data" / "qa.json"
@@ -27,10 +29,12 @@ class NLPEngine:
         self.questions = []
         self.answers = []
 
+        # Flatten questions → map ke answers (LIST)
         for item in self.data:
-            for q in item["questions"]:
+            answers = item.get("answers", [])
+            for q in item.get("questions", []):
                 self.questions.append(preprocess_text(q))
-                self.answers.append(item["answer"])
+                self.answers.append(answers)
 
         self.question_vectors = self.vectorizer.transform(self.questions)
 
@@ -43,6 +47,12 @@ class NLPEngine:
         best_score = similarity[0][best_index]
 
         if best_score < 0.25:
+            # ⬇⬇⬇ LOG PERTANYAAN GAGAL
+            log_failed_question(text, best_score)
             return None, best_score
 
-        return self.answers[best_index], best_score
+        # PILIH JAWABAN ACAK DARI LIST
+        possible_answers = self.answers[best_index]
+        answer = random.choice(possible_answers)
+
+        return answer, best_score
