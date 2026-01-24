@@ -5,7 +5,17 @@ const chatBox = document.getElementById("chat-box");
 const input = document.getElementById("user-input");
 
 /* ===============================
-   UTIL
+   SCROLL UTILITY
+================================ */
+
+function scrollToBottom(delay = 0) {
+    setTimeout(() => {
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }, delay);
+}
+
+/* ===============================
+   MESSAGE HANDLER
 ================================ */
 
 function addMessage(text, sender) {
@@ -13,7 +23,7 @@ function addMessage(text, sender) {
     msg.className = "message " + sender;
     msg.innerText = text;
     chatBox.appendChild(msg);
-    chatBox.scrollTop = chatBox.scrollHeight;
+    scrollToBottom(50);
     return msg;
 }
 
@@ -22,7 +32,7 @@ function addMessage(text, sender) {
 ================================ */
 
 function showTyping() {
-    hideTyping(); // pastikan tidak dobel
+    hideTyping(); // cegah dobel
     typingEl = addMessage("AI sedang mengetik...", "ai");
     typingEl.classList.add("typing");
 }
@@ -38,7 +48,7 @@ function hideTyping() {
    INPUT HANDLING (MOBILE FRIENDLY)
 ================================ */
 
-// auto-grow textarea utama
+// Auto-grow textarea utama
 input.addEventListener("input", () => {
     input.style.height = "auto";
     input.style.height = input.scrollHeight + "px";
@@ -50,6 +60,16 @@ input.addEventListener("keydown", e => {
         e.preventDefault();
         sendMessage();
     }
+});
+
+// Keyboard muncul → auto scroll
+input.addEventListener("focus", () => {
+    scrollToBottom(300);
+});
+
+// Viewport berubah (keyboard show/hide)
+window.addEventListener("resize", () => {
+    scrollToBottom(300);
 });
 
 /* ===============================
@@ -80,6 +100,7 @@ function sendMessage() {
         const answerText = data.answer || "Maaf, saya belum tahu jawabannya.";
         const aiMsg = addMessage(answerText, "ai");
 
+        // Jika AI belum tahu → tampilkan tombol ajar
         if (data.known === false) {
             const learnBox = document.createElement("div");
             learnBox.className = "learn-box";
@@ -99,7 +120,7 @@ function sendMessage() {
 }
 
 /* ===============================
-   TEACH AI
+   TEACH AI (LEARN MODE)
 ================================ */
 
 function teachAI(container) {
@@ -116,7 +137,7 @@ function teachAI(container) {
     textarea.style.border = "1px solid #ccc";
     textarea.style.marginTop = "6px";
 
-    // auto-grow textarea belajar
+    // Auto-grow textarea belajar
     textarea.addEventListener("input", () => {
         textarea.style.height = "auto";
         textarea.style.height = textarea.scrollHeight + "px";
@@ -148,10 +169,15 @@ function teachAI(container) {
         .then(() => {
             addMessage("Terima kasih, saya sudah belajar 👍", "ai");
             container.remove();
+        })
+        .catch(() => {
+            addMessage("Gagal menyimpan jawaban.", "ai");
         });
     };
 
     container.appendChild(textarea);
     container.appendChild(btn);
+
     textarea.focus();
+    scrollToBottom(300);
 }
