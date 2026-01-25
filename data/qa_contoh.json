@@ -186,5 +186,505 @@
       "Saya tidak selalu benar, namun saya terus belajar.",
       "Saya akan mencoba membantu sesuai kemampuan saya."
     ]
+  },
+  {
+    "intent": "teknologi_ai_definisi",
+    "templates": [
+      "apa itu {}",
+      "jelaskan tentang {}",
+      "definisi {}",
+      "{} itu apa sih"
+    ],
+    "variants": [
+      "artificial intelligence",
+      "AI",
+      "kecerdasan buatan",
+      "machine learning"
+    ],
+    "answers": [
+      "AI adalah simulasi kecerdasan manusia dalam mesin yang diprogram untuk berpikir dan belajar.",
+      "Kecerdasan buatan adalah bidang ilmu komputer yang menciptakan sistem yang dapat melakukan tugas-tugas yang biasanya membutuhkan kecerdasan manusia.",
+      "Machine learning adalah subset AI yang memungkinkan komputer belajar dari data tanpa diprogram secara eksplisit."
+    ]
+  },
+  {
+    "intent": "agama_islam_ibadah",
+    "templates": [
+      "bagaimana cara {}",
+      "berapa rakaat {}",
+      "tata cara {}",
+      "waktu {} kapan"
+    ],
+    "variants": [
+      "shalat fardhu",
+      "shalat wajib",
+      "puasa ramadhan",
+      "zakat fitrah"
+    ],
+    "answers": [
+      "Shalat fardhu terdiri dari 5 waktu: Subuh 2 rakaat, Dzuhur 4 rakaat, Ashar 4 rakaat, Maghrib 3 rakaat, dan Isya 4 rakaat.",
+      "Puasa Ramadhan dimulai dari terbit fajar hingga terbenam matahari dengan menahan diri dari makan, minum, dan hal-hal yang membatalkan puasa.",
+      "Zakat fitrah wajib dikeluarkan sebelum shalat Idul Fitri sebesar 2.5 kg makanan pokok atau senilai uang."
+    ]
+  },
+  {
+    "intent": "sains_biologi_dasar",
+    "templates": [
+      "apa fungsi {}",
+      "jelaskan tentang {}",
+      "{} berfungsi untuk apa",
+      "apa itu {} dalam biologi"
+    ],
+    "variants": [
+      "mitokondria",
+      "DNA",
+      "sel",
+      "fotosintesis"
+    ],
+    "answers": [
+      "Mitokondria adalah organel sel yang berfungsi sebagai pembangkit energi (ATP) melalui respirasi seluler.",
+      "DNA (Deoxyribonucleic Acid) adalah molekul pembawa informasi genetik yang menentukan karakteristik makhluk hidup.",
+      "Fotosintesis adalah proses tumbuhan mengubah sinar matahari, air, dan CO2 menjadi glukosa dan oksigen."
+    ]
+  },
+  {
+    "intent": "teknologi_blockchain",
+    "templates": [
+      "apa itu teknologi {}",
+      "bagaimana {} bekerja",
+      "jelaskan konsep {}",
+      "apa kegunaan {}"
+    ],
+    "variants": [
+      "blockchain",
+      "kriptografi",
+      "smart contract",
+      "NFT"
+    ],
+    "answers": [
+      "Blockchain adalah sistem ledger terdistribusi yang mencatat transaksi secara aman dan transparan dalam blok-blok yang terhubung.",
+      "Smart contract adalah program yang berjalan di blockchain dan dieksekusi otomatis ketika kondisi terpenuhi.",
+      "NFT (Non-Fungible Token) adalah aset digital unik yang diverifikasi menggunakan teknologi blockchain."
+    ]
+  },
+  {
+    "intent": "agama_kristen_ibadah",
+    "templates": [
+      "apa makna {}",
+      "bagaimana pelaksanaan {}",
+      "tradisi {} dalam Kristen",
+      "apa itu {}"
+    ],
+    "variants": [
+      "eucharist",
+      "baptisan",
+      "natal",
+      "paskah"
+    ],
+    "answers": [
+      "Eucharist atau Perjamuan Kudus adalah sakramen mengenang pengorbanan Yesus Kristus dengan roti dan anggur.",
+      "Baptisan adalah sakramen inisiasi dengan air yang melambangkan pembersihan dosa dan kelahiran baru dalam Kristus.",
+      "Paskah merayakan kebangkitan Yesus Kristus dari kematian, merupakan hari raya terpenting dalam agama Kristen."
+    ]
+  },
+  {
+    "intent": "sains_fisika_dasar",
+    "templates": [
+      "apa hukum {}",
+      "jelaskan teori {}",
+      "rumus {} apa",
+      "konsep {} dalam fisika"
+    ],
+    "variants": [
+      "newton",
+      "relativitas",
+      "termodinamika",
+      "gravitasi"
+    ],
+    "answers": [
+      "Hukum Newton I: Benda diam tetap diam, benda bergerak tetap bergerak kecuali ada gaya eksternal. Hukum II: F = m × a. Hukum III: Aksi = Reaksi.",
+      "Teori Relativitas Einstein terdiri dari relativitas khusus (kecepatan cahaya konstan) dan relativitas umum (gravitasi sebagai kelengkungan ruang-waktu).",
+      "Hukum Termodinamika I: Energi tidak dapat diciptakan/dimusnahkan, hanya diubah bentuk. Hukum II: Entropi alam semesta selalu meningkat."
+    ]
+  },
+  {
+    "intent": "agama_budha_ajaran",
+    "templates": [
+      "apa ajaran {}",
+      "jelaskan tentang {}",
+      "prinsip {} dalam Budha",
+      "makna {}"
+    ],
+    "variants": [
+      "empat kebenaran mulia",
+      "jalan tengah",
+      "nirwana",
+      "karma"
+    ],
+    "answers": [
+      "Empat Kebenaran Mulia: 1) Dukkha (penderitaan), 2) Samudaya (penyebab penderitaan), 3) Nirodha (berhentinya penderitaan), 4) Magga (jalan menuju berhentinya penderitaan).",
+      "Jalan Tengah adalah jalan menghindari ekstremisme, tidak terlalu memanjakan diri maupun menyiksa diri.",
+      "Karma adalah hukum sebab-akibat moral di mana setiap perbuatan memiliki konsekuensi di kehidupan sekarang atau mendatang."
+    ]
+  },
+  {
+    "intent": "teknologi_cybersecurity",
+    "templates": [
+      "apa itu serangan {}",
+      "bagaimana mencegah {}",
+      "jelaskan tentang {}",
+      "apa bahaya {}"
+    ],
+    "variants": [
+      "phishing",
+      "malware",
+      "ransomware",
+      "DDoS"
+    ],
+    "answers": [
+      "Phishing adalah teknik penipuan untuk mencuri informasi sensitif dengan menyamar sebagai entitas terpercaya melalui email atau website palsu.",
+      "Malware adalah perangkat lunak berbahaya yang dirancang untuk merusak, mengganggu, atau mengakses sistem komputer tanpa izin.",
+      "Ransomware adalah malware yang mengenkripsi data korban dan meminta tebusan untuk dekripsi."
+    ]
+  },
+  {
+    "intent": "sains_kimia_dasar",
+    "templates": [
+      "apa itu unsur {}",
+      "jelaskan reaksi {}",
+      "sifat {} dalam kimia",
+      "kegunaan {}"
+    ],
+    "variants": [
+      "tabel periodik",
+      "asam basa",
+      "polimer",
+      "hidrokarbon"
+    ],
+    "answers": [
+      "Tabel periodik adalah susunan unsur kimia berdasarkan nomor atom dan sifat kimianya, dikelompokkan menjadi periode dan golongan.",
+      "Reaksi asam-basa menurut Arrhenius: asam menghasilkan ion H⁺, basa menghasilkan ion OH⁻ dalam air.",
+      "Polimer adalah makromolekul terdiri dari monomer berulang, contoh: plastik, karet, DNA, dan protein."
+    ]
+  },
+  {
+    "intent": "agama_hindu_konsep",
+    "templates": [
+      "apa makna {}",
+      "jelaskan konsep {}",
+      "dalam Hindu, {} berarti",
+      "apa itu {} dalam Hindu"
+    ],
+    "variants": [
+      "dharma",
+      "karma",
+      "moksha",
+      "trimurti"
+    ],
+    "answers": [
+      "Dharma adalah hukum kosmis, kebenaran, kewajiban, dan jalan hidup yang benar sesuai dengan peran dan tahapan hidup.",
+      "Moksha adalah pembebasan dari siklus kelahiran kembali (samsara) dan penyatuan dengan Brahman (Tuhan).",
+      "Trimurti adalah tiga manifestasi Tuhan: Brahma (pencipta), Wisnu (pemelihara), dan Siwa (pemusnah)."
+    ]
+  },
+  {
+    "intent": "sains_kesehatan_virus",
+    "templates": [
+      "apa itu virus {}",
+      "bagaimana virus {} menyebar",
+      "gejala {} apa saja",
+      "pencegahan virus {}"
+    ],
+    "variants": [
+      "corona",
+      "COVID-19",
+      "influenza",
+      "HIV"
+    ],
+    "answers": [
+      "Virus corona adalah keluarga besar virus yang dapat menyebabkan penyakit mulai dari flu biasa hingga SARS dan COVID-19.",
+      "COVID-19 menyebar melalui droplet pernapasan, kontak langsung, dan udara dalam ruangan tertutup.",
+      "Gejala COVID-19 meliputi demam, batuk kering, sesak napas, kehilangan indra penciuman dan pengecapan."
+    ]
+  },
+  {
+    "intent": "agama_islam_rukun",
+    "templates": [
+      "apa saja rukun {}",
+      "berapa rukun {}",
+      "sebutkan rukun {}",
+      "rukun {} ada berapa"
+    ],
+    "variants": [
+      "iman",
+      "islam",
+      "shalat",
+      "puasa"
+    ],
+    "answers": [
+      "Rukun Iman ada 6: 1) Iman kepada Allah, 2) Malaikat, 3) Kitab-kitab, 4) Rasul, 5) Hari Kiamat, 6) Qada dan Qadar.",
+      "Rukun Islam ada 5: 1) Syahadat, 2) Shalat, 3) Zakat, 4) Puasa Ramadhan, 5) Haji bagi yang mampu.",
+      "Rukun shalat ada 13 termasuk takbiratul ihram, berdiri, membaca Al-Fatihah, ruku', sujud, dan duduk tasyahud akhir."
+    ]
+  },
+  {
+    "intent": "teknologi_robotika",
+    "templates": [
+      "apa itu {}",
+      "bagaimana {} bekerja",
+      "aplikasi {} di industri",
+      "masa depan {}"
+    ],
+    "variants": [
+      "robotika",
+      "otomasi industri",
+      "robot humanoid",
+      "kecerdasan swakendali"
+    ],
+    "answers": [
+      "Robotika adalah cabang teknologi yang merancang, membangun, dan mengoperasikan robot untuk berbagai tugas.",
+      "Robot humanoid adalah robot dengan bentuk menyerupai manusia, dilengkapi sensor, aktuator, dan sistem kontrol cerdas.",
+      "Otomasi industri menggunakan robot untuk meningkatkan efisiensi produksi di pabrik-pabrik modern."
+    ]
+  },
+  {
+    "intent": "sains_astronomi",
+    "templates": [
+      "jelaskan tentang {}",
+      "apa itu {} di astronomi",
+      "fakta menarik tentang {}",
+      "bagaimana {} terbentuk"
+    ],
+    "variants": [
+      "lubang hitam",
+      "nebula",
+      "supernova",
+      "planet ekstrasurya"
+    ],
+    "answers": [
+      "Lubang hitam adalah wilayah ruang-waktu dengan gravitasi sangat kuat sehingga tidak ada yang bisa lolos, termasuk cahaya.",
+      "Nebula adalah awan besar debu dan gas di angkasa, tempat kelahiran bintang-bintang baru.",
+      "Supernova adalah ledakan bintang masif di akhir hidupnya, menyebarkan elemen berat ke seluruh alam semesta."
+    ]
+  },
+  {
+    "intent": "agama_kristen_doa",
+    "templates": [
+      "bagaimana cara {}",
+      "apa isi {}",
+      "mengapa {} penting",
+      "contoh {}"
+    ],
+    "variants": [
+      "berdoa dalam Kristen",
+      "Doa Bapa Kami",
+      "doa syafaat",
+      "doa penyembahan"
+    ],
+    "answers": [
+      "Doa dalam Kristen adalah komunikasi dengan Tuhan, dapat dilakukan kapan saja dan di mana saja dengan sikap hormat dan iman.",
+      "Doa Bapa Kami diajarkan Yesus sebagai model doa yang mencakup penyembahan, penyerahan, permohonan, dan pengampunan.",
+      "Doa syafaat adalah doa untuk orang lain, meminta berkat dan pertolongan Tuhan bagi kebutuhan mereka."
+    ]
+  },
+  {
+    "intent": "teknologi_5g",
+    "templates": [
+      "apa kelebihan {}",
+      "perbedaan {} dan 4G",
+      "dampak {} pada IoT",
+      "keamanan jaringan {}"
+    ],
+    "variants": [
+      "jaringan 5G",
+      "teknologi 5G",
+      "internet 5G",
+      "konektivitas 5G"
+    ],
+    "answers": [
+      "Jaringan 5G menawarkan kecepatan hingga 100x lebih cepat dari 4G, latensi sangat rendah, dan kapasitas koneksi lebih besar.",
+      "5G menggunakan frekuensi gelombang milimeter yang memungkinkan bandwidth besar tetapi jangkauan lebih pendek dari 4G.",
+      "5G akan merevolusi IoT dengan mendukung miliaran perangkat terhubung simultan untuk smart city dan industri 4.0."
+    ]
+  },
+  {
+    "intent": "sains_genetika",
+    "templates": [
+      "apa itu {}",
+      "bagaimana {} bekerja",
+      "aplikasi {} dalam kedokteran",
+      "etika {}"
+    ],
+    "variants": [
+      "CRISPR-Cas9",
+      "terapi gen",
+      "kloning",
+      "DNA rekombinan"
+    ],
+    "answers": [
+      "CRISPR-Cas9 adalah teknologi penyuntingan gen yang memungkinkan modifikasi DNA dengan presisi tinggi untuk koreksi genetik.",
+      "Terapi gen adalah pengobatan dengan menyisipkan gen fungsional ke sel pasien untuk menggantikan gen rusak penyebab penyakit.",
+      "Kloning adalah proses menghasilkan individu genetik identik, baik kloning reproduktif maupun terapeutik."
+    ]
+  },
+  {
+    "intent": "agama_budha_meditasi",
+    "templates": [
+      "bagaimana teknik {}",
+      "manfaat {} dalam Budha",
+      "langkah-langkah {}",
+      "apa tujuan {}"
+    ],
+    "variants": [
+      "meditasi vipassana",
+      "meditasi mindfulness",
+      "meditasi cinta kasih",
+      "meditasi napas"
+    ],
+    "answers": [
+      "Meditasi Vipassana adalah teknik pengamatan realita secara jernih untuk mencapai pandangan terang tentang hakikat keberadaan.",
+      "Meditasi mindfulness melatih perhatian penuh pada momen kini tanpa penilaian, mengurangi stres dan meningkatkan fokus.",
+      "Meditasi cinta kasih (Metta) mengembangkan perasaan welas asih dan kasih sayang terhadap semua makhluk."
+    ]
+  },
+  {
+    "intent": "teknologi_kwantum",
+    "templates": [
+      "jelaskan konsep {}",
+      "apa perbedaan {} dan komputasi klasik",
+      "aplikasi praktis {}",
+      "tantangan {}"
+    ],
+    "variants": [
+      "komputasi kuantum",
+      "superposisi kuantum",
+      "komputer kuantum",
+      "algoritma kuantum"
+    ],
+    "answers": [
+      "Komputasi kuantum menggunakan qubit yang dapat berada dalam superposisi 0 dan 1 secara bersamaan, memungkinkan perhitungan paralel masif.",
+      "Qubit memiliki properti entanglement di mana keadaan satu qubit bergantung pada yang lain meski terpisah jarak jauh.",
+      "Algoritma kuantum seperti Shor dapat memfaktorkan bilangan besar jauh lebih cepat daripada komputer klasik, mengancam kriptografi RSA."
+    ]
+  },
+  {
+    "intent": "sains_lingkungan",
+    "templates": [
+      "apa penyebab {}",
+      "dampak {} terhadap bumi",
+      "cara mengurangi {}",
+      "solusi untuk {}"
+    ],
+    "variants": [
+      "perubahan iklim",
+      "pemanasan global",
+      "polusi plastik",
+      "deforestasi"
+    ],
+    "answers": [
+      "Perubahan iklim disebabkan peningkatan gas rumah kaca seperti CO2 dari pembakaran bahan bakar fosil, deforestasi, dan industri.",
+      "Pemanasan global meningkatkan suhu bumi, mencairkan es kutub, menaikkan permukaan laut, dan mengganggu ekosistem.",
+      "Polusi plastik mencemari lautan, membahayakan kehidupan laut, dan membutuhkan ratusan tahun untuk terurai."
+    ]
+  },
+  {
+    "intent": "agama_hindu_upacara",
+    "templates": [
+      "tujuan upacara {}",
+      "makna ritual {}",
+      "tahapan {}",
+      "simbolisme dalam {}"
+    ],
+    "variants": [
+      "Ngaben",
+      "Melasti",
+      "Galungan",
+      "Nyepi"
+    ],
+    "answers": [
+      "Upacara Ngaben adalah kremasi dalam Hindu Bali untuk membebaskan roh dari ikatan duniawi menuju moksha.",
+      "Melasti adalah ritual pembersihan diri dan benda suci di laut atau sumber air sebelum Nyepi.",
+      "Nyepi adalah hari keheningan dan introspeksi dengan catur brata: amati geni, amati karya, amati lelungan, amati lelanguan."
+    ]
+  },
+  {
+    "intent": "teknologi_augmented_reality",
+    "templates": [
+      "perbedaan {} dan VR",
+      "aplikasi {} dalam pendidikan",
+      "bagaimana {} bekerja",
+      "masa depan {}"
+    ],
+    "variants": [
+      "augmented reality",
+      "AR",
+      "realitas tertambah",
+      "mixed reality"
+    ],
+    "answers": [
+      "Augmented Reality (AR) menambahkan elemen digital ke dunia nyata melalui perangkat, berbeda dengan VR yang menciptakan dunia virtual sepenuhnya.",
+      "AR dalam pendidikan memungkinkan visualisasi 3D anatomi tubuh, simulasi sejarah, dan eksperimen kimia virtual.",
+      "Mixed Reality menggabungkan AR dan VR, memungkinkan interaksi antara objek digital dan fisik secara real-time."
+    ]
+  },
+  {
+    "intent": "sains_neurosains",
+    "templates": [
+      "apa fungsi {}",
+      "bagaimana {} mempengaruhi perilaku",
+      "penyakit terkait {}",
+      "riset terbaru tentang {}"
+    ],
+    "variants": [
+      "otak manusia",
+      "neuron",
+      "neuroplastisitas",
+      "sistem limbik"
+    ],
+    "answers": [
+      "Otak manusia terdiri dari otak depan (pemikiran), otak tengah (sensorik), dan otak belakang (fungsi otonom).",
+      "Neuroplastisitas adalah kemampuan otak membentuk koneksi saraf baru sepanjang hidup sebagai respons pembelajaran dan pengalaman.",
+      "Sistem limbik mengatur emosi, memori, dan motivasi, melibatkan amigdala, hipokampus, dan hipotalamus."
+    ]
+  },
+  {
+    "intent": "agama_konghucu_ajaran",
+    "templates": [
+      "apa prinsip {}",
+      "nilai-nilai {} dalam Konghucu",
+      "bagaimana menerapkan {}",
+      "ajaran utama {}"
+    ],
+    "varians": [
+      "Ren",
+      "Li",
+      "Xiao",
+      "Zhong Yong"
+    ],
+    "answers": [
+      "Ren (仁) adalah kebajikan tertinggi dalam Konghucu yang berarti cinta kasih, kemanusiaan, dan kemurahan hati.",
+      "Li (礼) adalah tata krama, ritual, dan norma sosial yang menjaga harmoni dalam masyarakat.",
+      "Xiao (孝) adalah bakti kepada orang tua dan leluhur, fondasi hubungan keluarga dalam ajaran Konghucu."
+    ]
+  },
+  {
+    "intent": "teknologi_biometrik",
+    "templates": [
+      "bagaimana {} meningkatkan keamanan",
+      "kelebihan dan kekurangan {}",
+      "aplikasi {} di perbankan",
+      "privacy concern {}"
+    ],
+    "variants": [
+      "pengenalan wajah",
+      "sidik jari biometrik",
+      "pemindai iris",
+      "autentikasi suara"
+    ],
+    "answers": [
+      "Pengenalan wajah menganalisis fitur wajah unik untuk identifikasi, digunakan di bandara, smartphone, dan keamanan publik.",
+      "Sidik jari biometrik mendeteksi pola ridge dan minutiae yang unik pada setiap individu untuk autentikasi perangkat.",
+      "Pemindai iris menggunakan pola lingkaran mata yang sangat akurat dengan tingkat kesalahan hanya 1 dalam 1.5 juta."
+    ]
   }
 ]
