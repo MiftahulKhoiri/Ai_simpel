@@ -686,5 +686,320 @@
       "Sidik jari biometrik mendeteksi pola ridge dan minutiae yang unik pada setiap individu untuk autentikasi perangkat.",
       "Pemindai iris menggunakan pola lingkaran mata yang sangat akurat dengan tingkat kesalahan hanya 1 dalam 1.5 juta."
     ]
+  },
+  {
+    "intent": "budaya_indonesia_tradisi",
+    "templates": [
+      "apa itu tradisi {}",
+      "asal daerah tradisi {}",
+      "makna tradisi {}",
+      "bagaimana pelaksanaan {}"
+    ],
+    "variants": [
+      "wayang kulit",
+      "batik",
+      "rendang",
+      "reog ponorogo"
+    ],
+    "answers": [
+      "Wayang kulit adalah seni pertunjukan tradisional Jawa menggunakan boneka kulit yang dimainkan dalang dengan iringan gamelan.",
+      "Batik adalah seni melukis kain dengan teknik canting dan malam, UNESCO telah mengakuinya sebagai Warisan Kemanusiaan.",
+      "Rendang adalah masakan tradisional Minangkabau yang dimasak lama dengan santan dan rempah, disebut sebagai makanan terenak dunia.",
+      "Reog Ponorogo adalah kesenian tradisional Jawa Timur dengan topeng singa barong dan penari berkuda lumping."
+    ]
+  },
+  {
+    "intent": "bahasa_indonesia_tata",
+    "templates": [
+      "apa perbedaan {} dan {}",
+      "penggunaan {} yang benar",
+      "contoh kalimat {}",
+      "aturan {} dalam bahasa Indonesia"
+    ],
+    "variants": [
+      "di dan ke",
+      "pun dan juga",
+      "baku dan tidak baku",
+      "imbuhan me dan ber"
+    ],
+    "answers": [
+      "'Di' menunjukkan tempat (di rumah), 'ke' menunjukkan arah (ke sekolah). 'Di' dipisah, 'ke' untuk arah juga dipisah.",
+      "Kata 'pun' penulisan baku dipisah kecuali untuk kata seperti adapun, bagaimanapun, kalaupun, meskipun.",
+      "Kata baku sesuai KBBI dan PUEBI, contoh: apotek (baku), apotik (tidak baku); risiko (baku), resiko (tidak baku).",
+      "Imbuhan 'me-' untuk membentuk kata kerja aktif (membaca), 'ber-' untuk keadaan atau melakukan sendiri (berjalan)."
+    ]
+  },
+  {
+    "intent": "seni_musik_instrumen",
+    "templates": [
+      "asal usul alat musik {}",
+      "cara memainkan {}",
+      "jenis alat musik {}",
+      "sejarah perkembangan {}"
+    ],
+    "variants": [
+      "gamelan",
+      "angklung",
+      "sasando",
+      "kolintang"
+    ],
+    "answers": [
+      "Gamelan berasal dari Jawa dan Bali, terdiri dari gong, kenong, saron, gender, dimainkan bersama dalam ensembel.",
+      "Angklung alat musik tradisional Sunda dari bambu, dimainkan dengan digoyangkan menghasilkan nada harmonis.",
+      "Sasando berasal dari NTT, terbuat dari daun lontar dengan dawai, dimainkan dengan dipetik seperti harpa.",
+      "Kolintang alat musik perkusi Minahasa dari kayu, dimainkan dengan dipukul untuk menghasilkan melodi."
+    ]
+  },
+  {
+    "intent": "ekonomi_makro",
+    "templates": [
+      "apa itu {} dalam ekonomi",
+      "dampak {} terhadap perekonomian",
+      "cara menghitung {}",
+      "faktor yang mempengaruhi {}"
+    ],
+    "variants": [
+      "inflasi",
+      "PDB",
+      "kurs valuta asing",
+      "suku bunga acuan"
+    ],
+    "answers": [
+      "Inflasi adalah kenaikan harga barang dan jasa secara umum dan terus-menerus dalam periode tertentu.",
+      "PDB (Produk Domestik Bruto) adalah total nilai barang dan jasa yang dihasilkan suatu negara dalam setahun.",
+      "Kurs valuta asing adalah harga mata uang suatu negara terhadap mata uang negara lain, dipengaruhi pasar dan kebijakan bank sentral.",
+      "Suku bunga acuan (BI Rate) ditetapkan bank sentral untuk mengendalikan inflasi dan pertumbuhan ekonomi."
+    ]
+  },
+  {
+    "intent": "politik_sistem",
+    "templates": [
+      "jelaskan sistem {}",
+      "perbedaan {} dan {}",
+      "kelebihan sistem {}",
+      "contoh negara dengan sistem {}"
+    ],
+    "variants": [
+      "demokrasi",
+      "presidensial dan parlementer",
+      "sosialis",
+      "monarki konstitusional"
+    ],
+    "answers": [
+      "Demokrasi adalah sistem pemerintahan di mana kekuasaan berada di tangan rakyat melalui pemilihan umum.",
+      "Sistem presidensial: presiden sebagai kepala negara dan pemerintahan. Parlementer: perdana menteri sebagai kepala pemerintahan dengan dukungan parlemen.",
+      "Sosialis adalah sistem di mana alat produksi dikuasai negara untuk distribusi yang merata kepada masyarakat.",
+      "Monarki konstitusional: raja/ratu sebagai kepala negara simbolis, kekuasaan pemerintahan di tangan perdana menteri (contoh: Inggris, Jepang)."
+    ]
+  },
+  {
+    "intent": "sejarah_indonesia",
+    "templates": [
+      "kapan peristiwa {} terjadi",
+      "tokoh penting dalam {}",
+      "latar belakang {}",
+      "dampak peristiwa {}"
+    ],
+    "variants": [
+      "Sumpah Pemuda",
+      "Proklamasi Kemerdekaan",
+      "Reformasi 1998",
+      "Bandung Lautan Api"
+    ],
+    "answers": [
+      "Sumpah Pemuda terjadi 28 Oktober 1928, menegaskan satu nusa, satu bangsa, satu bahasa: Indonesia.",
+      "Proklamasi Kemerdekaan dibacakan Soekarno-Hatta 17 Agustus 1945 di Jakarta, menandai kemerdekaan Indonesia.",
+      "Reformasi 1998 dipicu krisis ekonomi dan tuntutan demokratisasi, mengakhiri Orde Baru dan memulai era demokrasi.",
+      "Bandung Lautan Api 24 Maret 1946, rakyat Bandung membakar kota untuk mencegah digunakan musuh dalam perang kemerdekaan."
+    ]
+  },
+  {
+    "intent": "filsafat_aliran",
+    "templates": [
+      "apa inti ajaran {}",
+      "tokoh utama aliran {}",
+      "perbedaan {} dan {}",
+      "pengaruh {} dalam pemikiran modern"
+    ],
+    "variants": [
+      "stoikisme",
+      "eksistensialisme",
+      "utilitarianisme",
+      "humanisme"
+    ],
+    "answers": [
+      "Stoikisme mengajarkan pengendalian emosi dan menerima hal di luar kendali untuk mencapai ketenangan hidup.",
+      "Eksistensialisme menekankan kebebasan individu, tanggung jawab, dan bahwa hidup bermakna melalui pilihan kita sendiri.",
+      "Utilitarianisme (Bentham, Mill) menilai tindakan berdasarkan konsekuensinya, memaksimalkan kebahagiaan terbesar untuk sebanyak mungkin orang.",
+      "Humanisme menempatkan manusia sebagai pusat, menekankan akal budi, etika, dan martabat manusia tanpa tergantung doktrin agama."
+    ]
+  },
+  {
+    "intent": "psikologi_teori",
+    "templates": [
+      "siapa pencetus teori {}",
+      "jelaskan teori {} secara singkat",
+      "aplikasi teori {} dalam terapi",
+      "kritik terhadap teori {}"
+    ],
+    "variants": [
+      "hierarki kebutuhan Maslow",
+      "psikoanalisis Freud",
+      "behaviorisme",
+      "kognitif sosial Bandura"
+    ],
+    "answers": [
+      "Hierarki kebutuhan Maslow: piramida kebutuhan dari fisiologis, keamanan, sosial, penghargaan, hingga aktualisasi diri.",
+      "Psikoanalisis Freud: perilaku didorong alam bawah sadar, struktur kepribadian id-ego-superego, dan tahap perkembangan psikoseksual.",
+      "Behaviorisme (Skinner): perilaku dikondisikan melalui penguatan dan hukuman, fokus pada yang teramati dan terukur.",
+      "Teori kognitif sosial Bandura: belajar melalui observasi (modeling), interaksi antara kognisi, lingkungan, dan perilaku."
+    ]
+  },
+  {
+    "intent": "geografi_benua",
+    "templates": [
+      "negara terbesar di benua {}",
+      "iklim dominan di {}",
+      "gunung tertinggi di {}",
+      "sungai utama di benua {}"
+    ],
+    "variants": [
+      "Asia",
+      "Afrika",
+      "Eropa",
+      "Amerika Selatan"
+    ],
+    "answers": [
+      "Asia: negara terbesar Rusia (wilayah Asia), gunung tertinggi Everest (8.848 m), sungai utama Yangtze dan Indus.",
+      "Afrika: negara terbesar Aljazair, gunung tertinggi Kilimanjaro (5.895 m), sungai utama Nil (terpanjang di dunia).",
+      "Europa: negara terbesar Rusia (wilayah Eropa), gunung tertinggi Elbrus (5.642 m), sungai utama Volga dan Danube.",
+      "Amerika Selatan: negara terbesar Brasil, gunung tertinggi Aconcagua (6.961 m), sungai utama Amazon (debit terbesar)."
+    ]
+  },
+  {
+    "intent": "olahraga_sejarah",
+    "templates": [
+      "asal usul olahraga {}",
+      "peraturan dasar {}",
+      "turnamen bergengsi {}",
+      "atlet legendaris {}"
+    ],
+    "variants": [
+      "sepak bola",
+      "bulu tangkis",
+      "basket",
+      "renang"
+    ],
+    "answers": [
+      "Sepak bola modern berasal dari Inggris abad 19, FIFA didirikan 1904, Piala Dunia pertama 1930, atlet legendaris: Pele, Maradona, Messi.",
+      "Bulu tangkis berasal dari Inggris abad 19, dimainkan dengan raket dan kok, turnamen bergengsi: All England, Olimpiade, Kejuaraan Dunia BWF.",
+      "Basket diciptakan Dr. James Naismith 1891 di Amerika, dimainkan 5 lawan 5, NBA adalah liga terpopuler, atlet legendaris: Michael Jordan, Kobe Bryant.",
+      "Renang kompetitif mulai Olimpiade 1896, gaya bebas, dada, punggung, kupu-kupu, atlet legendaris: Michael Phelps (23 emas Olimpiade)."
+    ]
+  },
+  {
+    "intent": "kuliner_indonesia",
+    "templates": [
+      "bahan utama {}",
+      "asal daerah {}",
+      "cara membuat {}",
+      "variasi {} di daerah lain"
+    ],
+    "variants": [
+      "nasi goreng",
+      "sate",
+      "gado-gado",
+      "soto ayam"
+    ],
+    "answers": [
+      "Nasi goreng: nasi, kecap, bumbu tumis (bawang, cabai), telur, ayam/udang; variasi: nasi goreng kampung, Jawa, seafood.",
+      "Sate: daging tusuk sate (ayam, kambing, sapi) dibakar, saus kacang/kecap, asal dari Jawa, jenis: Madura, Padang, Ponorogo.",
+      "Gado-gado: sayuran rebus (kangkung, tauge, kentang) dengan bumbu kacang, lontong, telur, kerupuk; khas Jakarta/Betawi.",
+      "Soto ayam: sup ayam dengan kunyit, santan (optional), bihun, tauge, seledri; variasi: Soto Lamongan, Betawi, Madura."
+    ]
+  },
+  {
+    "intent": "kesenian_tari",
+    "templates": [
+      "properti tari {}",
+      "gerakan khas tari {}",
+      "iringan musik tari {}",
+      "makna simbolik tari {}"
+    ],
+    "variants": [
+      "tari kecak",
+      "tari pendet",
+      "tari saman",
+      "tari piring"
+    ],
+    "answers": [
+      "Tari Kecak dari Bali, properti api, gerakan tangan dan badan, iringan vokal 'cak' tanpa alat musik, menceritakan Ramayana.",
+      "Tari Pendet tarian penyambutan Bali, gerakan lemah gemulai, properti bokor bunga, sebagai ucapan selamat datang.",
+      "Tari Saman dari Aceh, gerakan tepuk tangan dan badan berirama cepat, syair bernuansa Islami, biasanya dinyanyikan.",
+      "Tari Piring dari Minangkabau, properti piring di tangan, gerakan cepat dan berputar tanpa menjatuhkan piring, melambangkan syukur."
+    ]
+  },
+  {
+    "intent": "sastra_indonesia",
+    "templates": [
+      "pengarang novel {}",
+      "tema utama {}",
+      "latar waktu {}",
+      "analisis karakter {}"
+    ],
+    "variants": [
+      "Siti Nurbaya",
+      "Laskar Pelangi",
+      "Pulang",
+      "Bumi Manusia"
+    ],
+    "answers": [
+      "'Siti Nurbaya' karya Marah Rusli (1922), tema perjodohan paksa, latar masa kolonial, kritik adat Minangkabau.",
+      "'Laskar Pelangi' karya Andrea Hirata (2005), tema pendidikan dan mimpi, latar Belitung 1970-an, kisah inspiratif anak sekolah.",
+      "'Pulang' karya Leila S. Chudori (2012), tema eksil politik 1965, perjalanan panjang pulang secara fisik dan batin.",
+      "'Bumi Manusia' karya Pramoedya Ananta Toer (1980), tema penjajahan dan nasionalisme, latar akhir abad 19 Hindia Belanda."
+    ]
+  },
+  {
+    "intent": "hukum_indonesia",
+    "templates": [
+      "isi pasal {}",
+      "sanksi untuk {}",
+      "perbedaan {} dan {}",
+      "contoh pelanggaran {}"
+    ],
+    "variants": [
+      "UU ITE",
+      "KUHP",
+      "hak cipta",
+      "perlindungan konsumen"
+    ],
+    "answers": [
+      "UU ITE (Undang-Undang Informasi dan Transaksi Elektronik) mengatur kejahatan siber, pencemaran nama baik, hak privasi digital.",
+      "KUHP (Kitab Undang-Undang Hukum Pidana) mengatur tindak pidana umum seperti pencurian, penganiayaan, pembunuhan, dan sanksinya.",
+      "Hak cipta melindungi karya seni, sastra, ilmu pengetahuan; pelanggaran berupa pembajakan, plagiarisme, distribusi ilegal.",
+      "UUPK (Undang-Undang Perlindungan Konsumen) melindungi hak konsumen, sanksi untuk pelaku usaha yang menyesatkan atau merugikan."
+    ]
+  },
+  {
+    "intent": "perdagangan_internasional",
+    "templates": [
+      "manfaat {}",
+      "hambatan dalam {}",
+      "perjanjian {}",
+      "dampak {} terhadap industri lokal"
+    ],
+    "variants": [
+      "ekspor impor",
+      "globalisasi ekonomi",
+      "AFTA",
+      "tarif dan kuota"
+    ],
+    "answers": [
+      "Ekspor-impor memperluas pasar, meningkatkan devisa, transfer teknologi; hambatan: tarif, kuota, regulasi non-tarif.",
+      "Globalisasi ekonomi: integrasi pasar dunia, arus barang/jasa/modal lintas negara, meningkatkan persaingan dan efisiensi.",
+      "AFTA (ASEAN Free Trade Area) perjanjian perdagangan bebas ASEAN untuk menghapus tarif intra-ASEAN, meningkatkan daya saing kawasan.",
+      "Tarif adalah pajak impor, kuota pembatasan jumlah impor; dampak melindungi industri domestik namun bisa memicu perang dagang."
+    ]
   }
 ]
