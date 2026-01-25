@@ -3,7 +3,7 @@ import random
 import itertools
 from pathlib import Path
 
-QUESTIONS_PER_INTENT = 1000
+QUESTIONS_PER_INTENT = 100
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SOURCE_PATH = BASE_DIR / "data" / "qa_contoh.json"
