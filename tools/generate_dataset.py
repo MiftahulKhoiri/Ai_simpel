@@ -15,6 +15,19 @@ def load_intents():
         return json.load(f)
 
 
+def safe_format(template: str, value: str) -> str:
+    """
+    Aman untuk template:
+    - tanpa {}
+    - dengan 1 {}
+    - dengan banyak {}
+    """
+    count = template.count("{}")
+    if count == 0:
+        return template
+    return template.format(*([value] * count))
+
+
 def main():
     intents = load_intents()
     dataset = []
@@ -24,6 +37,7 @@ def main():
         variants = intent.get("variants", [])
         answers = intent.get("answers", [])
 
+        # Validasi minimal
         if not templates or not variants or not answers:
             continue
 
@@ -32,13 +46,18 @@ def main():
 
         questions = []
         for t, v in combinations[:QUESTIONS_PER_INTENT]:
-            q = t.format(v).strip().lower()
-            questions.append(q)
+            q = safe_format(t, v).strip().lower()
+            if q:
+                questions.append(q)
+
+        # Skip jika gagal generate pertanyaan
+        if not questions:
+            continue
 
         dataset.append({
-            "intent": intent["intent"],
+            "intent": intent.get("intent", f"auto_{len(dataset)+1}"),
             "questions": questions,
-            "answers": answers  # SIMPAN SEMUA JAWABAN
+            "answers": answers
         })
 
     with open(DATA_PATH, "w", encoding="utf-8") as f:
